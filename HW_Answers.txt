@@ -3,27 +3,30 @@
 
 1. What does the ___word___ 'polymorphism' mean?
 
-Answer -
+Answer - "Many Changes", so to make something polymoprhic means it will have many forms.
 
 
 2. What does it mean when we apply polymorphism to OO design? Give a simple Java example.
 
-Answer -
+Answer - It means that a class can do many difference methods/functions in different circumstances
+
+ a example would be by having a computer be able to have an interface for instance called "Iconnect" which is implemented by monitor etc rather than hard-coding a computer to have a monitor.
+
 
 
 3. What can we use to implement polymorphism in Java?
 
-Answer - 
+Answer - We can perform polymorphism in java by method overloading and method overriding. Simply put either inheritance or interfaces.
 
 
 4. How many 'forms' can an object take when using polymorphism?
 
-Answer -
+Answer - Many as mentioned in question 1 
 
 
 5. Give an example of when you could use polymorphism.
 
-Answer - 
+Answer - In a lab we had to replace the requirement that a computer class object has a monitor with an interface "IConnect", implemented by monitors, printers, mobile phones etc. This meant that the computer could connect to different devices and would be more flexible iand coul return a custom string wheneer a different type of device had connnected.
 
 
 
@@ -32,27 +35,45 @@ Answer -
 
 6. What do we mean by 'composition' in reference to object-oriented programming?
 
-Answer -
+Answer - Composition describes a class that references one or more objects of other classes in instance variables. This allows you to model a has-a association between objects.
 
 7. When would you use composition? Provide a simple example in Java.
 
-Answer -
+I would use composition when a component wouldn't exist outwith the class for example:
+
+Answer - class Roof {
+    private int width;
+    private int length;
+    private String type;
+
+}
+
+class House {
+    private Roof roof;
+    
+    public House() {
+        this.roof = new Roof();
+    }
+}
 
 
 8. Give a difference between composition and aggregation?
 
-Answer - 
-
+Answer - When using Aggregation the object/objects can exist independently from the object which contains them unlike composition wherenthey cannot exist independently.
+         Aggregation is one type of association between two objects describing the “have a” relationship while Composition is a specific type of Aggregation which implies ownership.
 
 9. What is/are the advantage(s) of using composition/aggregation?
 
-Answer -
+Answer - 
+         A design based on object composition usually will have less classes and could make code more readable and also less timeconsuming to implement.
+         There is no conflict between methods/properties names.
+         It also allows the use of another object's methods without having to extend an abstract class, which could result in multiple unneccassary methods on the new class.
 
 10. When using composition, when an object is destroyed, what happens to all the objects it is composed of?
 
-Answer - 
+Answer - When the owning object is destroyed so are all the other objects it is composed of aswell
 
 
 11. When using aggregation, when an object is destroyed, what happens to all the objects it is composed of?
 
-Answer - 
+Answer - Nothing as the objects composing the  owning object can exist independently
